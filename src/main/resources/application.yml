@@ -1,0 +1,30 @@
+application:
+    name: bookLibraryManagement
+logging:
+    file:
+        name: /gunjan/log/services.log
+        path: /gunjan/services/log
+    level:
+        org:
+            springframework: info
+    pattern:
+        console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+        file: '"%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{365} - %msg%n"'
+
+jwt:
+    secret: venueserviceb  
+server:
+    port: 8081
+spring:
+    datasource:
+        initialization-mode: always
+        password: password1
+        platform: mysql
+        url: jdbc:mysql://localhost:3306/bookManagement?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+        username: admin
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
