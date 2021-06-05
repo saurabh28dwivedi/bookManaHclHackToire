@@ -11,7 +11,7 @@ import com.book.library.model.BookBorrowHistory;
 import junit.framework.Assert;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BorrowBookHistoryServiceTest {
+public class BorrowBookHistoryServiceImplTest {
 
 	
 	@InjectMocks

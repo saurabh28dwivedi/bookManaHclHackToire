@@ -1,4 +1,4 @@
-package com.book.library.controller;
+package com.book.library.repository;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,25 +11,23 @@ import com.book.library.model.BookBorrowHistory;
 import com.book.library.service.BorrowBookHistoryService;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BorrowBookControllerTest {
+public class BorrowBookRepositoryTest {
 
 	@InjectMocks
-	private BorrowBookHistoryController borrowBookHistoryController = new BorrowBookHistoryController();
+	private BorrowBookRepository BorrowBookRepository;
 
 	@Mock
 	private BorrowBookHistoryService BorrowBookHistoryService;
+	
 	@Mock
 	BookBorrowHistory BookBorrowHistory;
-
+	
+	
 	@Test
-	public void testCreatehistory() throws Exception {
+	public void repository() throws Exception {
 		 BorrowBookHistoryService.createHistory(BookBorrowHistory);
-		 Assert.assertNotNull(BookBorrowHistory);
-
-}
-	@Test
-	public void testgetList() throws Exception {
 		 BorrowBookHistoryService.getList();
 		 Assert.assertNotNull(BookBorrowHistory);
+
 }
 }
